@@ -1,9 +1,9 @@
 'use strict';
-let express     = require('express'),
-    router      = express.Router(),
+let express = require('express'),
+    router  = express.Router(),
     unirest = require('unirest');
 
-// hit api, return page num if invalid.
+// hit api to see if we get a question
 router.get('/:catNum/:pageNum', (req, res) => {
    let cat = req.params.catNum
    let page = parseInt(req.params.pageNum)
@@ -14,8 +14,9 @@ router.get('/:catNum/:pageNum', (req, res) => {
       .end((result) => {
          let render = ['next',cat,(page+1)];
          if (result.body) {
-            if(result.body[0]){
-            } else {
+            // we got a response
+            if(!result.body[0]){
+               // but there are no more questions
                render = ['done at: '+(page-1)]
             }
          }

@@ -5,14 +5,13 @@ let app = express();
 var logger = require('morgan');
 app.use(logger('dev'));
 
-// set up all the things:
+// set port and static:
 app.set('port', 3000);
-
 app.use('/', express.static(__dirname + '/public'));
 
-///// write routes below ///////////////////////////////////////////////////////
-let routies = require('./routes/api.js' )
-app.use('/', routies);
+// my one dinky route
+let dinky = require('./routes/api.js' )
+app.use('/', dinky);
 
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);

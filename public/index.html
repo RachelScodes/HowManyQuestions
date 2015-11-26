@@ -15,16 +15,24 @@
          <script>
             'use strict'
             $('#run').click(function(){
-               test = true
-               $("#results").text('running')
-               console.log('running');
+               // loading screen
+               $("#results").text('running');
+
+               // DO ALL THE THINGS!!!
+               test = true;    console.log('running');
+
+               // get category id number from input box
                let categoryNum = $('#category').val()
+
+               // go fetch
                getResults(categoryNum,1)
+
+               // popping bubbles
                return false
             })
             $('#stop').click(function(){
-               test = false
-               console.log('stopped');
+               // staaahp
+               test = false;   console.log('stopped');
                return false
             })
          </script>
