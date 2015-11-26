@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>testing</title>
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="script.js"></script>
+   </head>
+   <body>
+      <input id="category"></input>
+      <button id='run'>Run Test</button>
+      <button id='stop'>Stop Test</button>
+      <div id="results">
+      </div>
+         <script>
+            'use strict'
+            $('#run').click(function(){
+               test = true
+               $("#results").text('running')
+               console.log('running');
+               let categoryNum = $('#category').val()
+               getResults(categoryNum,1)
+               return false
+            })
+            $('#stop').click(function(){
+               test = false
+               console.log('stopped');
+               return false
+            })
+         </script>
+   </body>
+</html>
