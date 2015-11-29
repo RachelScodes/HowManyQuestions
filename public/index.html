@@ -2,39 +2,34 @@
 <html>
    <head>
       <meta charset="utf-8">
-      <title>testing</title>
+      <title>Battle Royale</title>
+      <link rel="stylesheet" href="style.css" charset="utf-8">
       <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-      <script src="script.js"></script>
    </head>
    <body>
-      <input id="category"></input>
-      <button id='run'>Run Test</button>
-      <button id='stop'>Stop Test</button>
-      <div id="results">
+      <!-- container for whole ap -->
+      <div class="container">
+         <!-- login/out -->
+         <div id="apit-test">
+            <input id="category"></input>
+            <button id='run'>Run Test</button>
+            <button id='stop'>Stop Test</button>
+            <div id="results">
+            </div>
+         </div>
+         <!-- navigation -->
+         <!-- project live chat -->
+         <!-- app goes here -->
+         <div id="app">
+            <!-- trivia game in room -->
+            <div id="game">
+               <!-- click to get trivia questions -->
+
+            </div>
+         </div>
       </div>
-         <script>
-            'use strict'
-            $('#run').click(function(){
-               // loading screen
-               $("#results").text('running');
-
-               // DO ALL THE THINGS!!!
-               test = true;    console.log('running');
-
-               // get category id number from input box
-               let categoryNum = $('#category').val()
-
-               // go fetch
-               getResults(categoryNum,1)
-
-               // popping bubbles
-               return false
-            })
-            $('#stop').click(function(){
-               // staaahp
-               test = false;   console.log('stopped');
-               return false
-            })
-         </script>
+      <script src="helpers.js"></script>
+      <script src="script.js"></script>
+      <footer>Copyright 2015 by <a href="https://github.com/m428" target="_blank">Mala Nimalasuriya,</a> <a href="https://github.com/RachelScodes" target="_blank">Rachel Smyth,</a> <a href="https://github.com/sp180" target="_blank">Alex Wang</a>. View source on <a href="https://github.com/RachelScodes/BattleRoyale" target="_blank">Github</a></footer>
    </body>
 </html>
